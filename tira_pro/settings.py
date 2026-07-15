@@ -26,7 +26,9 @@ SECRET_KEY = 'django-insecure-6u%*qdqzz!bz3#&b!(bepc=f_iix)&ajl)wh-az#tt^3*%p^8-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["tira-pro.onrender.com",
+    "localhost",
+    "127.0.0.1",]
 
 
 # Application definition
