@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">   
+    <title> Tira: Shop Makeup, Skin, Hair & Beauty Products Online</title>
+    <link rel="icon" type="image/x-icon"href="https://tse3.mm.bing.net/th?id=OIP.kjsFAkhybpiMsEg5uOLWwQAAAA&pid=Api&P=0&h=180">
+
+     
+    <style>
+       
+        ul{
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        li{
+            padding-right: 25px;
+        }
+        .box{
+            border-radius: 5px;
+        }
+        .box2{
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            margin-right: 25px;
+        }
+        .design{
+            background-color: #F4D0C4;
+            height: 1000px;
+            margin-top: 100px;
+            border-radius: 5px;
+        }
+        .design2{
+            background-color: #89655D;
+            height: 600px;
+            border-radius: 5px;
+            text-align: center; 
+            margin-top: 100px;
+            color: white;
+        }
+        .design3{
+            background-color: #FCF1ED;
+            height: 400px;
+            border-radius: 5px;
+            text-align: center;
+            margin-top: 100px;
+        }
+        .tube{
+            text-align: center;
+            display: flex;
+            padding-left: 600px;
+        }
+        .inimg{
+            position: relative;
+        }
+        .text{
+            position: absolute;
+            bottom:5%;
+            left: 20%;
+            color:#ffffff;
+            font-size: 30px;
+        }
+        .design4{
+            background-color: #FEE8E6;
+            border-radius: 5px;
+        }
+        button{
+            background-color: black;
+            color: white;
+            padding: 10px 40px;
+            border-radius: 5px;
+        }
+        .design5{
+            background-color: #FCF1ED;
+            border-radius: 5px;
+            padding: 80px;
+        }
+        .info{
+            text-align: center;
+        }
+        input{
+            margin: 10px;
+            width: 35%;
+            margin-left: 0%;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 30px;
+        }
+        .tira{
+            color:red;
+            font-size:200%;
+        }
+        .bold{
+            font-weight: bold;
+            padding-bottom: 15px;
+        }
+        .main{
+            position: relative;
+        }
+        .child{
+            position: absolute;
+            top:-40%;
+            height:350px
+        }
+        .child2{
+            position: absolute;
+            bottom:-10%;
+            height:240px;
+            border-radius: 5px;
+        }
+    </style>
+  </head>
+  <body>
+  <header>     
+        <div class="d-flex justify-content-around pt-2 ">
+            <div>
+                <ul>
+                    <li class="tira">tira</li>
+                    <li class="px-5">Brands</li>
+                    <li class="px-5">For You</li>
+                    <li class="px-5">Tira Red</li>
+                    <li class="px-5">Offers</li>
+                </ul>
+            </div>
+               <div class="col-md-2 ps-5">
+                                {% if user.is_authenticated %}
+                                <div
+                                  style="font-weight: 500; margin-left: 20px; color: #222; border: solid black 1px; padding: 10px; border-radius: 7px; ">
+                                  <a target="_blank" class=" hov-btn3"
+                                    style="text-decoration: none; color: #222;  border-radius: 15px; padding: 8px;"
+                                    href="{% url 'logout_user' %}">Logout</a>
+                                </div>
+                                {% else %}
+                                <div
+                                  style="font-weight: 500; margin-left: 10px; color: #222; border: solid black 1px; padding: 10px; border-radius: 7px; ">
+                                  <a class=" hov-btn3" style="text-decoration: none; border-radius: 15px; padding: 4px; color: #222;"
+                                    href="{% url 'register' %}" target="_blank">Register</a> <span>/</span><a target="_blank"
+                                    class=" hov-btn3" style="text-decoration: none; color: #222;  border-radius: 15px; padding: 4px;"
+                                    href="{% url 'login_user' %}">Login</a>
+                                </div>
+                                {% endif %}
+        </div>
+            <div class="pt-2">
+               
+                <i class="bi bi-cart"></i>
+                <i class="bi bi-person"></i>
+            </div>
+        </div>
+     
+        <hr>
+        <!-- <div class="d-flex justify-content-center">
+            <ul>
+                <li>What's New</li>
+                <li>Makeup</li>
+                <li>Skin</li>
+                <li>Hair</li>
+                <li>Fragrance</li>
+                <li>Men</li>
+                <li>Bath & Body</li>
+                <li>Tools & Appliances</li>
+                <li>Mom & Baby</li>
+                <li>Minies</li>
+                <li>Homegrown</li>
+            </ul>
+        </div> -->
+        <nav class="menu w-100">
+            <div class="container-fluid">
+                <div class="row w-100">
+                    <div class="col-md-12 w-100 d-flex align-items-center justify-content-center py-3">
+                        {% for category in categories %}
+                            <div class="menu-item px-3">
+                                <a href="{% url "category" category.name %}" class="text-decoration-none text-dark text-uppercase">{{ category.name }}</a>
+                            </div>
+                        {% endfor %}
+      
+                    </div>
+                </div>
+            </div>
+
+        </nav>
+  
+    </header>
+
+  {% block content %}
+  
+  {% endblock content %}
+       <footer>
+            <div class="container my-5">
+                    <div class="row">
+                        <div class="col">
+                            <div class="tira">tira</div>
+                            <div>For every day, for every mood, for every you</div>
+                        </div>
+                        <div class="col">
+                            <div class="bold">Tira</div>
+                                <div>Who We Are</div>
+                                <div>For You</div>
+                                <div>tira Red</div>
+                                <div>Offers</div>
+                                <div>Tira Tribe</div>                    
+                        </div>
+                        <div class="col">
+                            <div class="bold">Customer Care</div>
+                                <div>Help Center</div>
+                                <div>FAQs</div>              
+                        </div>
+                        <div class="col">
+                            <div class="bold">Categories</div>
+                            <div>Makeup</div>
+                            <div>Skin</div>
+                            <div>Hair</div>
+                            <div>Fragrance</div>
+                            <div>Bath & Body</div>
+                            <div>Men</div>
+                            <div>Mom & Baby</div>
+                            <div>Homegrown</div>
+                            <div>Tools & Appliances</div>
+                            <div>Minis</div>
+                            <div>Gifts</div>          
+                        </div>
+                        <div class="col">
+                            <div class="bold">
+                                Contact Us
+                            </div>
+                            <div>
+                                Call: 1-800-890-3030
+                                Whatsapp: 79770 90909
+                                (All days, between 8am-8pm)
+                                Email: help@tirabeauty.com
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="container">
+                <hr>
+                <div class="row py-3">
+                    <div class="col-md-10">
+                        © 2024 Tira. All Rights Reserved.
+                    </div>
+                    <div class="col-md-2 ">
+                        <i class="bi bi-facebook px-4"></i>
+                        <i class="bi bi-instagram"></i>
+                        <i class="bi bi-twitter px-4"></i>
+                        <i class="bi bi-youtube"></i>
+                    </div>
+                
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <ul>
+                            <li>Terms & Conditions</li>
+                            <li>Fees & Payments</li>
+                            <li>Cancellation & Refund Policy</li>
+                            <li>Privacy Policy</li>
+                            <li>Shipping & Delivery Policy</li>
+                            <li>Rewards Policy</li>
+                            <li>Promotions Terms & Conditions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+       </footer>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    
+  </body>
+</html>

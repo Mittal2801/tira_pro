@@ -1,0 +1,1 @@
+web: gunicorn tira_pro.wsgi
