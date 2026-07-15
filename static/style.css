@@ -6,6 +6,7 @@
         }
         li{
             padding-right: 25px;
+            list-style-type: none;
         }
         .box{
             border-radius: 5px;
