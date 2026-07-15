@@ -24,6 +24,10 @@
         li{
             padding-right: 25px;
         }
+        .nav-link {
+            text-decoration: none;
+            color: black;
+        }
         .box{
             border-radius: 5px;
         }
@@ -98,6 +102,14 @@
         .tira{
             color:red;
             font-size:200%;
+            list-style: none;
+            font-size: 40px;
+            font-weight: bold;
+            color: red;
+            cursor: pointer;
+        }
+        .tira:hover {
+            color: darkred;
         }
         .bold{
             font-weight: bold;
@@ -124,7 +136,9 @@
         <div class="d-flex justify-content-around pt-2 ">
             <div>
                 <ul>
-                    <a href="{% url 'index' %}"><li class="tira">tira</li></a>
+                    <li>
+                        <a href="{% url 'index' %}" class="nav-link">Tira</a>
+                    </li>
                     <li class="px-5">Brands</li>
                     <li class="px-5">For You</li>
                     <li class="px-5">Tira Red</li>
